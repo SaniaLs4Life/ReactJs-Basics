@@ -1,34 +1,21 @@
-import React, { Component } from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
-
+import React, { Component } from 'react'
+import 'bootstrap/dist/css/bootstrap.min.css'
+import  Header from './components/Header'
+import TodoList from './components/TodoList'
 class App extends Component {
   render() {
+    const user = {
+      name: "Hakan",
+      todo: ["Programming", "Studying", "Shopping", "Cooking"],
+      age : 23
+    }
     return (
-      <div className="row">
-        <div className="container">
-          <div class="card text-center">
-            <div class="card-header list-group-item-info">
-              ReactJS Basics
-        </div>
-            <div class="card-body">
-              <h5 class="card-title">Todo List</h5>
-              <p class="card-text">Add your todo list</p>
-              <input type="text" className="form-control input-sm" placeholder="Enter some text" />
-              <a href="#" class="btn btn-warning">Add</a>
-            </div>
-            <ul class="list-group">
-              <li class="list-group-item list-group-item-info">YOUR TODO LIST</li>
-              <li class="list-group-item">Dapibus ac facilisis in</li>
-              <li class="list-group-item">Morbi leo risus</li>
-              <li class="list-group-item">Porta ac consectetur ac</li>
-              <li class="list-group-item">Vestibulum at eros</li>
-            </ul>
-
-          </div>
-        </div>
+      <div>
+        <Header />
+        <TodoList user={user}  />
       </div>
-    );
+    )
   }
 }
 
-export default App;
+export default App
