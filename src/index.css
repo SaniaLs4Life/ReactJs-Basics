@@ -1,0 +1,40 @@
+body{
+    font-family: 'Comfortaa' !important;
+}
+.btn{
+    margin-top:10px;
+    font-weight: bold !important;
+}
+.text-center{
+    margin-top:15px;
+}
+.list-group-item-info
+{
+    background-color: #34495e !important;
+    color : #FFF !important;
+    font-weight: bold;
+}
+textarea:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="color"]:focus,
+input[type="button"]:focus,
+.uneditable-input:focus {
+  outline: 0;
+  border:1px solid #BEE5EB;
+
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
