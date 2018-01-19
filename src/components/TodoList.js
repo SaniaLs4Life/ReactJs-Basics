@@ -1,17 +1,33 @@
 import React, { Component } from 'react';
 
 class TodoList extends Component {
-    constructor(props) {
+    constructor({user}) {
         super()
         this.state = {
-            name: props.user.name
+            name: user.name,
+            homeLink:'Home Page'
         }
+
+        //Timer
+        /*setTimeout(() => {
+            this.setState({
+                name:"Hakan Genc"
+            })
+        }, 2000)*/
     }
-    onMakeOlder() {
+    
+
+    onChangeLink(newLink){
         this.setState({
-            name: this.state.name + 3
+            name: 'Hello, ' + this.state.name
         })
     }
+    onHandleChange(event){
+        this.setState({
+            newLink : event.target.value
+        })
+    }
+
     render() {
         return (
             <div className="row">
@@ -23,8 +39,8 @@ class TodoList extends Component {
                         <div class="card-body">
                             <h5 class="card-title">Todo List</h5>
                             <p class="card-text">Add your todo list</p>
-                            <input type="text" className="form-control input-sm" placeholder="Enter some text" />
-                            <a href="/#" onClick={this.onMakeOlder.bind(this)} class="btn btn-warning">Add</a>
+                            <input type="text" className="form-control input-sm" value={this.state.name} onChange={(event) => this.onHandleChange(event) } placeholder="Enter some text" />
+                            <a href="/#" onClick={this.onChangeLink.bind(this)} class="btn btn-warning">Add</a>
                         </div>
                         <ul class="list-group">
                             <li class="list-group-item list-group-item-info">YOUR TODO LIST - @{this.state.name}</li>
