@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 class App extends Component {
@@ -7,7 +6,18 @@ class App extends Component {
     return (
       <div className="row">
         <div className="container">
-          <button className="btn btn-primary">Click Me!</button>
+          <div class="card">
+            <div class="card-header">
+              Title
+            </div>
+            <div class="card-body">
+              <blockquote class="blockquote mb-0">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
+              </blockquote>
+            </div>
+          </div>
+          <button className="btn btn-success">Send</button>
         </div>
       </div>
     );
