@@ -11,7 +11,7 @@ body{
 .list-group-item-info
 {
     background-color: #34495e !important;
-    color : #FFF !important;
+    color : #666!important;
     font-weight: bold;
 }
 textarea:focus,
